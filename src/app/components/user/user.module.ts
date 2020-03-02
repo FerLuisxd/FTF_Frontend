@@ -13,15 +13,20 @@ import {MatDialogModule} from '@angular/material/dialog'
 import { MatInputModule } from "@angular/material/input";
 import {MatCardModule} from '@angular/material/card';
 import { RepDialogComponent } from './rep-dialog/rep-dialog.component';
+import { MatIconModule, MatTableModule, MatSelectModule } from '@angular/material';
 @NgModule({
   declarations: [UserListComponent, UserCreateComponent, RepDialogComponent],
   imports: [
     CommonModule,
     UserRoutingModule,
+
     MatTabsModule,
     FormsModule,
     ReactiveFormsModule,
     MatInputModule,
+    MatTableModule,
+    MatIconModule,
+    MatSelectModule,
     MatCardModule,MatDialogModule,MatButtonModule
   ],
   entryComponents:[RepDialogComponent]
