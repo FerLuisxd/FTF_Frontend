@@ -32,6 +32,9 @@ export class UserCreateComponent implements OnInit {
     console.log(this.data)
     if(this.data!=undefined) {
       this.name = this.data.name
+      this.email = this.data.email
+      this.usergroup = this.data.usergroup
+      this.username = this.data.username
       this.Id = this.data.id
       this.Title = 'Update User'
     }
@@ -67,17 +70,17 @@ export class UserCreateComponent implements OnInit {
   update(){
     let obj:any = {}
     obj.name = this.name
-    obj.id = this.Id
-    console.log("obj", obj)
-    // this.userService.putUser(obj).subscribe(data=>{
-    //   console.log(data)
-    //   let res:any = data
-    //   if(res==true) this.toastService.success('Actualización exitosa!', 'Success!');
-    //   if(res==false) this.toastService.error('Error en la actualización!', 'Oops!');
-    //   if(res!=true&&res!=false)this.toastService.error('Error', 'Oops!');
-    // },err=>{
-    //   console.log("err", err)
-    //   this.toastService.error('Error de sistema', `${err.error.mensaje}`);
-    // })
+    obj.email = this.email
+    obj.usergroup = this.usergroup
+    obj.username = this.username
+    console.log("obj", obj,this.Id)
+    this.userService.putUser(obj,this.Id).subscribe(data=>{
+      console.log(data)
+      let res:any = data
+       this.toastService.success('Updated!', 'Success!');
+    },err=>{
+      console.log("err", err)
+      this.toastService.error('Error', `${err.error.mensaje}`);
+    })
   }
 }

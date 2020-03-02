@@ -7,6 +7,9 @@ mat-form-field{
 table {
     width: 90%;
 }
+.pagination{
+    width: 90%;
+}
 button{
     /* margin-left: 20%; */
     margin-top: 20px;
