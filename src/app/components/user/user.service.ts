@@ -17,9 +17,9 @@ export class UserService {
     return this.http.post<User>(this.apiUrl,data)
   }
   putUser(data:User,id){
-    return this.http.put<User>(this.apiUrl,data,{params:{id:id}})
+    return this.http.put<User>(this.apiUrl+`/${id}`,data)
   }
-  deleteUser(data:User,id){
-    return this.http.delete<User>(this.apiUrl,{params:{id:id}})
+  deleteUser(id){
+    return this.http.delete<User>(this.apiUrl+`/${id}`)
   }
 }

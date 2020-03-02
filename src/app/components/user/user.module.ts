@@ -15,7 +15,7 @@ import { MatInputModule } from "@angular/material/input";
 import {MatCardModule} from '@angular/material/card';
 import { RepDialogComponent } from './rep-dialog/rep-dialog.component';
 
-import { MatIconModule } from '@angular/material';
+import { MatIconModule, MatPaginatorModule } from '@angular/material';
 import {MatSelectModule} from '@angular/material/select';
 
 @NgModule({
@@ -25,6 +25,7 @@ import {MatSelectModule} from '@angular/material/select';
     UserRoutingModule,
 
     MatTabsModule,
+    MatPaginatorModule,
     FormsModule,
     ReactiveFormsModule,
     MatInputModule,
