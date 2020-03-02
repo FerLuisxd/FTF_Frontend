@@ -1,11 +1,11 @@
 .dataTable{
-    padding-left: 20%;
+    padding-left: 5%;
 }
 mat-form-field{
     width: 80%;
 }
 table {
-    width: 80%;
+    width: 90%;
 }
 button{
     /* margin-left: 20%; */

@@ -8,10 +8,11 @@ import { MatSidenavModule } from "@angular/material/sidenav";
 import { MatToolbarModule } from "@angular/material/toolbar";
 import {MatMenuModule } from '@angular/material/menu'
 
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HttpClientModule } from '@angular/common/http';
 
+import { ToastrModule } from "ngx-toastr";
 @NgModule({
   declarations: [
     AppComponent
@@ -20,6 +21,8 @@ import { AppComponent } from './app.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    HttpClientModule,
+    //ToastrModule.forRoot(),
     //Material
     MatButtonModule,
     MatIconModule,
