@@ -1,0 +1,43 @@
+<mat-card>
+  <mat-card-title>{{Title}}</mat-card-title>
+  <mat-card-content>
+    <form>
+      <!-- <mat-form-field class="full-width">
+        <input
+          matInput
+          placeholder="Email"
+          [formControl]="emailFormControl"
+          [errorStateMatcher]="matcher"
+        />
+        <mat-hint align="end">Hint:email@domain.com</mat-hint>
+        <mat-error align="end"
+          *ngIf="
+            emailFormControl.hasError('email') &&
+            !emailFormControl.hasError('required')
+          "
+        >
+          Oof</mat-error
+        >
+      </mat-form-field> -->
+      <mat-form-field class="full-width">
+          <input matInput placeholder="Name" [(ngModel)]="name" [ngModelOptions]="{standalone: true}">
+      </mat-form-field>
+      <mat-form-field class="full-width">
+            <input matInput placeholder="username"[(ngModel)]="username" [ngModelOptions]="{standalone: true}">
+        </mat-form-field>
+        <mat-form-field class="full-width">
+          <input matInput placeholder="email"[(ngModel)]="email" [ngModelOptions]="{standalone: true}">
+      </mat-form-field>
+
+      <mat-form-field class="full-width">
+        <input matInput placeholder="usergroup"[(ngModel)]="usergroup" [ngModelOptions]="{standalone: true}">
+    </mat-form-field>
+      
+
+    </form>
+  </mat-card-content>
+  <mat-card-actions>
+      <button mat-raised-button color="primary" (click)="save()" *ngIf="data==undefined">Save</button>
+      <button mat-raised-button color="primary" (click)="update()" *ngIf="data!=undefined" >Update</button>
+  </mat-card-actions>
+</mat-card>
