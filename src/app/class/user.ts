@@ -15,10 +15,10 @@ export class User {
 
     usergroup:string
 
-    lastVisit:Date
+    lastVisit:string
   
 
-    registered:Date
+    registered:string
   
     deleted:boolean
   

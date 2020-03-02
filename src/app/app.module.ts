@@ -22,7 +22,7 @@ import { ToastrModule } from "ngx-toastr";
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    //ToastrModule.forRoot(),
+    ToastrModule.forRoot(),
     //Material
     MatButtonModule,
     MatIconModule,

@@ -5,7 +5,7 @@ import { MatSort} from '@angular/material/sort';
 import { UserService } from '../user.service';
 import { Router } from '@angular/router';
 import { User } from 'src/app/class/user';
-
+import * as moment from 'moment'
 @Component({
   selector: 'app-user-list',
   templateUrl: './user-list.component.html',
@@ -27,6 +27,11 @@ export class UserListComponent implements OnInit {
   listData(){
     this.userService.getUsers().subscribe(data=>{
       console.log('data',data)
+      data.forEach(x=>{
+        x.lastVisit=moment(x.lastVisit).format('DD-MM-YYYY h:m')
+        x.registered= moment(x.registered).format('DD-MM-YYYY h:m')
+      }
+      )
       this.dataSource = new MatTableDataSource(data)})
     //console.log(this.dataSource)
   }
